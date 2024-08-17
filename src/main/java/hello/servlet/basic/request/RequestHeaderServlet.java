@@ -14,6 +14,22 @@ public class RequestHeaderServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        System.out.println("--- REQUEST-LINE - start ---");
+        System.out.println("request.getMethod() = " + request.getMethod()); //GETHTTP/1.1
+        System.out.println("request.getProtocol() = " + request.getProtocol()); //
+
+        System.out.println("request.getScheme() = " + request.getScheme()); //http
+        // http://localhost:8080/request-header
+        System.out.println("request.getRequestURL() = " + request.getRequestURL());
+        // /request-header
+        System.out.println("request.getRequestURI() = " + request.getRequestURI());
+        //username=hi
+        System.out.println("request.getQueryString() = " +
+                request.getQueryString());
+        System.out.println("request.isSecure() = " + request.isSecure()); //https 사용유무
+
+        System.out.println("--- REQUEST-LINE - end ---");
+        System.out.println();
 
     }
 
