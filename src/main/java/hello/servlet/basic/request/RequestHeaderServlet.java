@@ -14,6 +14,11 @@ public class RequestHeaderServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        printStartLine(request);
+
+    }
+
+    private static void printStartLine(HttpServletRequest request) {
         System.out.println("--- REQUEST-LINE - start ---");
         System.out.println("request.getMethod() = " + request.getMethod()); //GETHTTP/1.1
         System.out.println("request.getProtocol() = " + request.getProtocol()); //
@@ -30,7 +35,6 @@ public class RequestHeaderServlet extends HttpServlet {
 
         System.out.println("--- REQUEST-LINE - end ---");
         System.out.println();
-
     }
 
 }
