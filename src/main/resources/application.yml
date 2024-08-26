@@ -6,3 +6,8 @@ logging:
           http11: trace
 
 
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
