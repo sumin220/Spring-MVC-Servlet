@@ -22,11 +22,20 @@ public class MyArrayListV3 {
         return  size;
     }
 
-    public void add(Object object) {
+    public void add(Object o) {
         if (size == elementData.length) {
             grow();
         }
-        elementData[size] = object;
+        elementData[size] = o;
+        size++;
+    }
+
+    public void add(int index, Object e) {
+        if (size == elementData.length) {
+            grow();
+        }
+        shiftRightFrom(index);
+        elementData[index] = e;
         size++;
     }
 
