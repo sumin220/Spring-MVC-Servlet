@@ -45,6 +45,19 @@ public class MyArrayListV2 {
         return oldValue;
     }
 
+    public int indexOf(Object o) {
+        for (int i = 0; i < size; i++) {
+            if (o.equals(elementData[i])) {
+                return i;
+            }
+        }
+        return -1;
+    }
 
+    @Override
+    public String toString() {
+        return Arrays.toString(Arrays.copyOf(elementData, size)) + " size" + size
+                + ", capacity: " + elementData.length;
+    }
 }
 
